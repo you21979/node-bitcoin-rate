@@ -5,7 +5,7 @@ node-bitcoin-rate
 
 ```
 npm install
-node app
+./rate
 ```
 
 ## print

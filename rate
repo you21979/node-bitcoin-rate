@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var promise = require('bluebird');
 var rate = require('./lib/rate');
 
