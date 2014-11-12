@@ -1,0 +1,4 @@
+var promise = require('bluebird');
+var rate = require('./lib/rate');
+
+rate.rates().then(console.log)
