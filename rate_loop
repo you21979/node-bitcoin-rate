@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+var promise = require('bluebird');
+var rate = require('./lib/rate');
+
+var update = function(sec){
+    rate.rates().then(function(v){
+        console.log(new Date())
+        v.forEach(function(v){
+            console.log(v.name, v.rates['BTC_JPY'])
+        })
+        console.log('-----------------------------')
+    }).then(function(){
+        setTimeout(function(){
+            update(sec)
+        }, sec * 1000)
+    })
+}
+
+update(30);
