@@ -3,7 +3,7 @@ var promise = require('bluebird');
 var rate = require('./lib/rate');
 
 var update = function(sec){
-    rate.rates().then(function(v){
+    rate.ticker().then(function(v){
         console.log(new Date())
         v.forEach(function(v){
             console.log(v.name, v.rates['BTC_JPY'])
