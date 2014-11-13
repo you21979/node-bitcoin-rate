@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+var promise = require('bluebird');
+var rate = require('./lib/rate');
+
+rate.ticker().then(function(res){
+    res.forEach(function(v){
+        console.log(v)
+    })
+})
