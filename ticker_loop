@@ -18,4 +18,4 @@ var update = function(sec){
     })
 }
 
-update(30);
+update(60);
